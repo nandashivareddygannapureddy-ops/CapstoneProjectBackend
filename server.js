@@ -35,7 +35,13 @@ process.on("exit", (code) => {
 
 
 // ================= CORS =================
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://vercel.com/nandashivareddygannapureddy-ops-projects/capstone-project-frontend-srsh",
+    credentials: true,
+  })
+);
+
 
 
 // ================= BODY PARSER =================
