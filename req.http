@@ -1,0 +1,95 @@
+### Register User
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "firstName": "vikaas",
+  "lastName": "bandaru",
+  "email": "cikass@gmail.com",
+  "password": "User@1234",
+  "profileImageUrl": "https://www.wikihow.com/Get-the-URL-for-Pictures"
+}
+
+### Register Author
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "akhilesh",
+  "lastName": "goud",
+  "email": "ak@gmail.com",
+  "password": "Author@1234",
+  "profileImageUrl": "https://www.wikihow.com/Get-the-URL-for-Pictures"
+}
+
+### Admin Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "admin5@gmail.com",
+  "password": "admin5"
+}
+
+### Author Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "ak@gmail.com",
+  "password": "Author@1234"
+}
+
+### Create Article
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author": "69afebdb7e1e8174f515e463",
+  "title": "java",
+  "category": "prog",
+  "content": "java.util.*"
+}
+
+### Get Articles of Author
+GET http://localhost:4000/author-api/articles/69afebdb7e1e8174f515e463
+
+### Update Article
+PUT http://localhost:4000/author-api/articles/69afec7b0cbfd32ae13939d2
+Content-Type: application/json
+
+{
+  "author": "69afec7b0cbfd32ae13939d2",
+  "title": "python",
+  "category": "prog",
+  "content": "functions, numpy, pandas"
+}
+
+### Delete Article
+DELETE http://localhost:4000/author-api/users/69ae9554ad6ad394d7d3047b/articles/69ae9554ad6ad394d7d3047b
+
+### Get All Articles (User)
+GET http://localhost:4000/user-api/articles
+
+### Logout
+GET http://localhost:4000/common-api/logout
+
+### Test API
+GET http://localhost:4000/test
+
+### Delete User (Admin)
+DELETE http://localhost:4000/admin-api/users/
+
+### Get All Users (Admin)
+GET http://localhost:4000/admin-api/users/
+
+### Delete Article (Alternative Route)
+DELETE http://localhost:4000/author-api/articles/author-id/article-id
+
+### Add Comment to Article
+PUT http://localhost:4000/author-api/articles/author-id/article-id
+Content-Type: application/json
+
+{
+  "comment": "good article"
+}
