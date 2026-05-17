@@ -1,7 +1,7 @@
 import exp from "express";
 import { authenticate, register } from "../services/authService.js";
 import { ArticleModel } from "../Models/ArticleModel.js";
-import { checkAuthor } from "../middlewares/checkauthor.js";
+import { checkAuthor } from "../middlewares/checkAuthor.js";
 import { verifyToken } from "../middlewares/verifyTokens.js";
 import { upload } from "../config/multer.js";
 import { uploadToCloudinary } from "../config/cloudinaryUpload.js";
