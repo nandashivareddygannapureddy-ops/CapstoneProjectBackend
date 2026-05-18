@@ -35,16 +35,14 @@ process.on("exit", (code) => {
 
 
 // ================= CORS =================
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://capstone-project-frontend-srsh-83clszzic.vercel.app",
-  "https://capstone-project-frontend-srsh-83clszic.vercel.app",
-];
-
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (
+        !origin ||
+        origin.includes("vercel.app") ||
+        origin.includes("localhost")
+      ) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
