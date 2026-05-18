@@ -60,8 +60,8 @@ authorRoute.post("/login", async (req, res) => {
 
     res.cookie("token", result.token, {
       httpOnly: true,
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-      secure: process.env.NODE_ENV === "production"
+      sameSite: "none",
+      secure: true
     });
 
     res.status(200).json({

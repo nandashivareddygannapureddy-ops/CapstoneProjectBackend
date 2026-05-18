@@ -87,8 +87,8 @@ app.get("/auth/google/callback",
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-      secure: process.env.NODE_ENV === "production",
+      sameSite: "none",
+      secure: true,
     });
 
     // Redirect back to frontend based on role
