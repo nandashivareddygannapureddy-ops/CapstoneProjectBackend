@@ -37,7 +37,7 @@ process.on("exit", (code) => {
 // ================= CORS =================
 app.use(
   cors({
-    origin: "https://vercel.com/nandashivareddygannapureddy-ops-projects/capstone-project-frontend-srsh",
+    origin: ["https://capstone-project-frontend-srsh-83clszzic.vercel.app", "http://localhost:5173"],
     credentials: true,
   })
 );
