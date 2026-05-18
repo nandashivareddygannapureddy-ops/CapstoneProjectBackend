@@ -101,7 +101,7 @@ app.use("/common-api", commonRouter);
 const connectDB = async () => {
   try {
 
-    await connect(process.env.DB_URL);
+    await connect(process.env.DB_URL || process.env.MONGODB_URI);
 
     console.log("DB connection success");
 
